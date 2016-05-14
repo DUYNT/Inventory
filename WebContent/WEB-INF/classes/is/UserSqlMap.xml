@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tecapro.inventory.user.dao.UserDao">
+	<update id="updatePassword" parameterType="com.tecapro.inventory.common.model.User">
+		update obj_users 
+		set mat_khau = #{matKhauMoi} 
+		where ten_dang_nhap = #{tenDangNhap}
+	</update>
+	<update id="updateInfo" parameterType="com.tecapro.inventory.common.model.User">
+		update obj_users 
+		set
+		<if test="tenDayDu != null and tenDayDu != ''">
+			ten_day_du = #{tenDayDu}
+		</if>
+		<if test="soDienThoai != null and soDienThoai != ''">
+			,so_dien_thoai = #{soDienThoai}
+		</if>
+		<if test="chungMinhThu != null and chungMinhThu != ''">
+			,chung_minh_thu = #{chungMinhThu}
+		</if>
+		<if test="ngayCap != null and ngayCap != ''">
+			,ngay_cap = #{ngayCap}
+		</if>
+		<if test="noiCap != null and noiCap != ''">
+			,noi_cap = #{noiCap}
+		</if>
+		<if test="donVi != null and donVi != ''">
+			,don_vi = #{donVi}
+		</if>
+		<if test="quyenSuDung != null and quyenSuDung != ''">
+			,quyen_su_dung = #{quyenSuDung}
+		</if>
+		<if test="kieuHangHoa != null and kieuHangHoa != ''">
+			,kieu_hang_hoa = #{kieuHangHoa}
+		</if>
+		<if test="ngayTaoSuDung != null and ngayTaoSuDung != ''">
+			,ngay_tao_su_dung = #{ngayTaoSuDung}
+		</if>
+		where ten_dang_nhap = #{tenDangNhap}
+	</update>
+</mapper>

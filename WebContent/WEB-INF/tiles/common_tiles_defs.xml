@@ -1,0 +1,48 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+	<definition name="BASE" path="/WEB-INF/pages/common-layout.jsp">
+		<put name="meta" value="/WEB-INF/pages/common/meta.jsp" />
+		<put name="style" value="/WEB-INF/pages/common/style.jsp" />
+		<put name="script" value="/WEB-INF/pages/common/script.jsp" />
+		<put name="body" value="" />
+		<put name="title" value="Inventory Storage" />
+		<put name="subTitle" value="" />
+		<put name="update_gamen" value="0" />
+		<put name="onLoad" value="" />
+		<put name="onUnLoad" value="" />
+		<put name="header" value="HEADER" />
+		<put name="footer" value="FOOTER" />
+	</definition>
+	
+	<definition name="HEADER" path="/WEB-INF/pages/common/header.jsp">
+		<put name="id" value="HEADER" />
+	</definition>
+	
+	<definition name="FOOTER" path="/WEB-INF/pages/common/footer.jsp">
+		<put name="id" value="FOOTER" />
+	</definition>
+	
+	<definition name="PAGING" path="/WEB-INF/pages/common/paging.jsp">
+    </definition>
+
+    <!-- <definition name="SERVER" path="/WEB-INF/pages/server/server_list.jsp">
+    </definition> -->
+    <definition name="INDEX" path="/WEB-INF/pages/index.jsp">
+    </definition>
+	<definition name="LOGIN.BASE" path="/WEB-INF/pages/login-layout.jsp">
+		<put name="meta" value="/WEB-INF/pages/common/login/meta.jsp" />
+		<put name="style" value="/WEB-INF/pages/common/login/style.jsp" />
+		<put name="script" value="/WEB-INF/pages/common/login/script.jsp" />
+		<put name="body" value="" />
+		<put name="subTitle" value="" />
+		<put name="update_gamen" value="0" />
+		<put name="onLoad" value="" />
+		<put name="onUnLoad" value="" />
+		<put name="header" value="HEADER" />
+		<put name="footer" value="FOOTER" />
+	</definition>
+	
+	
+</tiles-definitions>

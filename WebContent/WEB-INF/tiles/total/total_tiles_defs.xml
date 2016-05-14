@@ -1,0 +1,25 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="TOTAL" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="TOTAL" />
+        <put name="body" value="/WEB-INF/pages/total/total.jsp" />
+    </definition>
+    
+    <definition name="TOTAL1" path="/WEB-INF/pages/total/sub/scrtotal1.jsp">
+    	<put name="id" value="TOTAL1"></put>
+    </definition>
+        <definition name="TOTAL2" path="/WEB-INF/pages/total/sub/scrtotal2.jsp">
+    	<put name="id" value="TOTAL2"></put>
+    </definition>
+        <definition name="TOTAL3" path="/WEB-INF/pages/total/sub/scrtotal3.jsp">
+    	<put name="id" value="TOTAL3"></put>
+    </definition>
+        <definition name="TOTAL4" path="/WEB-INF/pages/total/sub/scrtotal4.jsp">
+    	<put name="id" value="TOTAL4"></put>
+    </definition>
+        <definition name="TOTAL5" path="/WEB-INF/pages/total/sub/scrtotal5.jsp">
+    	<put name="id" value="TOTAL5"></put>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tecapro.inventory.login.dao.LoginDao">
+	<resultMap id="BaseResultMap" type="com.tecapro.inventory.common.model.Admin">
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="ten_dang_nhap" property="tenDangNhap" jdbcType="VARCHAR" />
+		<result column="mat_khau" property="matKhau" jdbcType="VARCHAR" />
+		<result column="ten_day_du" property="tenDayDu" jdbcType="VARCHAR" />
+		<result column="so_dien_thoai" property="soDienThoai" jdbcType="VARCHAR" />
+		<result column="chung_minh_thu" property="chungMinhThu" jdbcType="VARCHAR" />
+		<result column="ngay_cap" property="ngayCap" jdbcType="VARCHAR" />
+		<result column="noi_cap" property="noiCap" jdbcType="VARCHAR" />
+		<result column="don_vi" property="donVi" jdbcType="VARCHAR" />
+		<result column="quyen_su_dung" property="quyenSuDung" jdbcType="INTEGER" />
+		<result column="kieu_hang_hoa" property="kieuHangHoa" jdbcType="INTEGER" />
+		<result column="ngay_tao_su_dung" property="ngayTaoSuDung"
+			jdbcType="VARCHAR" />
+		<result column="delete_flag" property="deleteflag" jdbcType="BIT" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		ID,ten_dang_nhap,mat_khau,ten_day_du,so_dien_thoai,chung_minh_thu,ngay_cap,noi_cap,don_vi,quyen_su_dung,kieu_hang_hoa,ngay_tao_su_dung,delete_flag
+	</sql>
+	<sql id="Base_Where_Selective">
+		<trim prefix="where" prefixOverrides="AND |OR ">
+			<if test="id != null and id != ''">
+				ID = #{id,jdbcType=INTEGER}
+			</if>
+			<if test="tenDangNhap != null and tenDangNhap != ''">
+				AND ten_dang_nhap = #{tenDangNhap,jdbcType=VARCHAR}
+			</if>
+			<if test="matKhau != null and matKhau != ''">
+				AND mat_khau = #{matKhau,jdbcType=VARCHAR}
+			</if>
+		</trim>
+	</sql>
+
+	<select id="getUser" resultMap="BaseResultMap"
+		parameterType="com.tecapro.inventory.common.model.AdminKey">
+		select
+		<include refid="Base_Column_List" />
+		from obj_users
+		<include refid="Base_Where_Selective" />
+		limit 1
+	</select>
+
+	<select id="getAllUsersCount" resultType="Integer"
+		parameterType="com.tecapro.inventory.common.model.Admin">
+		select count(*)
+		from obj_users
+		<include refid="Base_Where_Selective" />
+	</select>
+
+	<select id="getAllUsers" resultMap="BaseResultMap"
+		parameterType="com.tecapro.inventory.common.model.AdminKey">
+		select
+		<include refid="Base_Column_List" />
+		from obj_users
+		<include refid="Base_Where_Selective" />
+		order by ten_dang_nhap ASC
+	</select>
+</mapper>

@@ -1,0 +1,14 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="LOGIN" extends="LOGIN.BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="LOGIN" />
+        <put name="title" value="Login" />
+        <put name="body" value="/WEB-INF/pages/login/login.jsp" />
+
+        <put name="buttonList[1].buttonName" value="Đăng nhập" />
+        <put name="buttonList[1].action" value="/login_login" />
+    </definition>
+
+</tiles-definitions>

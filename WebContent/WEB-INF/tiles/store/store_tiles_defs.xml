@@ -1,0 +1,22 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="STORE" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="STORE" />
+        <put name="body" value="/WEB-INF/pages/store/store.jsp" />
+    </definition>
+    
+    <definition name="STORE1" path="/WEB-INF/pages/store/sub/scrstore1.jsp">
+    	<put name="id" value="STORE1"></put>
+    </definition>
+        <definition name="STORE2" path="/WEB-INF/pages/store/sub/scrstore2.jsp">
+    	<put name="id" value="STORE2"></put>
+    </definition>
+        <definition name="STORE3" path="/WEB-INF/pages/store/sub/scrstore3.jsp">
+    	<put name="id" value="STORE3"></put>
+    </definition>
+        <definition name="STORE4" path="/WEB-INF/pages/store/sub/scrstore4.jsp">
+    	<put name="id" value="STORE4"></put>
+    	</definition>
+</tiles-definitions>

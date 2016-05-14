@@ -1,0 +1,10 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="HOME" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="HOME" />
+        <put name="title" value="Inventory Storage" />
+        <put name="body" value="/WEB-INF/pages/home/home.jsp" />
+    </definition>
+</tiles-definitions>

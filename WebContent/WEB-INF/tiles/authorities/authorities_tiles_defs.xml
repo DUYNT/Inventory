@@ -1,0 +1,25 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="AUTHORITIES" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="AUTHORITIES" />
+        <put name="title" value="Phân quyền người dùng" />
+        <put name="body" value="/WEB-INF/pages/authorities/authorities.jsp" />
+    </definition>
+    
+   	<definition name="AUTHORITIES1" path="/WEB-INF/pages/authorities/scr/scrauthorities1.jsp">
+    	<put name="id" value="AUTHORITIES1"></put>
+    </definition>
+    
+    <definition name="AUTHORITIES2" path="/WEB-INF/pages/authorities/scr/scrauthorities2.jsp">
+    	<put name="id" value="AUTHORITIES2"></put>
+    </definition>
+    
+    <definition name="AUTHORITIES3" path="/WEB-INF/pages/authorities/scr/scrauthorities3.jsp">
+    	<put name="id" value="AUTHORITIES3"></put>
+    </definition>
+    <definition name="AUTHORITIES4" path="/WEB-INF/pages/authorities/scr/scrauthorities4.jsp">
+    	<put name="id" value="AUTHORITIES4"></put>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="css3" default="war" basedir=".">
+
+    <property file="project.properties" />
+	<property name="workspace" value=".." />
+
+
+    <!-- classpath -->
+    <path id="classpath">
+        <fileset dir="${tomcat.lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${webapp.lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+	<!-- compile task -->
+    <target name="compile">
+        <delete dir="${classes.dir}" />
+    	<mkdir dir="${classes.dir}"/>
+
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false"
+        	verbose="true" encoding="UTF-8"
+        	fork="yes" memoryMaximumSize="512m">
+            <classpath refid="classpath"/>
+        </javac>
+        
+    	<!-- Copy  resource -->
+    	<copy todir="${classes.dir}" overwrite="true">
+    	    <fileset dir="${res.dir}">
+                <exclude name="*.xls" />
+                <exclude name="jasper/*.jrxml" />
+                <exclude name="log4j.*" />
+                <exclude name="filepath.*" />
+    	    </fileset>
+    	</copy>
+        <copy file="${res.dir}/filepath.properties.server.xml" tofile="${classes.dir}/filepath.properties.xml" overwrite="true"/>
+        <copy file="${res.dir}/log4j.server.properties" tofile="${classes.dir}/log4j.properties" overwrite="true"/>
+        
+    </target>
+
+    <!-- war task depend to compile -->
+    <target name="war" depends="compile">
+        <war destfile="${war.file.name}.war" webxml="${web.dir}/WEB-INF/web.xml">
+            <fileset dir="${web.dir}" />
+        </war>
+    </target>
+
+</project>

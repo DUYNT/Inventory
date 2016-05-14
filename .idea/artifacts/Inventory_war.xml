@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Inventory:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Inventory-1.0 TECAPRO.war">
+      <element id="artifact" artifact-name="Inventory:war exploded" />
+    </root>
+  </artifact>
+</component>

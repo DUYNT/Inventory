@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+ 
+<struts-config>
+	<action-mappings>
+        <action path="/Login_init" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="/Home_init.do" />
+            <forward name="failure" path="LOGIN" />
+        </action>
+        <action path="/Login_login" name="BaseForm" scope="request" validate="true">
+            <forward name="success" path="/Home_init.do" redirect="true"/>
+            <forward name="failure" path="LOGIN" />
+        </action>
+        <action path="/Login_loguot" name="BaseForm" scope="request" validate="true">
+            <forward name="success" path="LOGIN" redirect="true"/>
+        </action>
+	</action-mappings>
+	
+</struts-config>

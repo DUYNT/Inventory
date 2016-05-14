@@ -1,0 +1,55 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+	<definition name="PHIEUXUAT1" path="/WEB-INF/pages/popup/quan-ly-phieu-xuat/popup1.jsp">
+		<put name="id" value="PHIEUXUAT1"></put>
+	</definition>
+	<definition name="PHIEUXUAT2" path="/WEB-INF/pages/popup/quan-ly-phieu-xuat/popup2.jsp">
+		<put name="id" value="PHIEUXUAT2"></put>
+	</definition>
+		<definition name="PHIEUXUAT3" path="/WEB-INF/pages/popup/quan-ly-phieu-xuat/popup3.jsp">
+		<put name="id" value="PHIEUXUAT3"></put>
+	</definition>
+		<definition name="PHIEUNHAP1" path="/WEB-INF/pages/popup/quan-ly-phieu-nhap/popup1.jsp">
+		<put name="id" value="PHIEUNHAP1"></put>
+	</definition>
+	<definition name="PHIEUNHAP2" path="/WEB-INF/pages/popup/quan-ly-phieu-nhap/popup2.jsp">
+		<put name="id" value="PHIEUNHAP2"></put>
+	</definition>
+		<definition name="PHIEUNHAP3" path="/WEB-INF/pages/popup/quan-ly-phieu-nhap/popup3.jsp">
+		<put name="id" value="PHIEUNHAP3"></put>
+	</definition>
+	
+	<!-- POPUP COMMON -->
+	<definition name="CONFIRM" path="/WEB-INF/pages/popup/common/confirm.jsp">
+		<put name="id" value="CONFIRM"></put>
+	</definition>
+	<definition name="DETAILKH" path="/WEB-INF/pages/popup/common/detail-kehoach.jsp">
+		<put name="id" value="DETAILKH"></put>
+	</definition>
+	
+	<definition name="REPORTTOTAL" path="/WEB-INF/pages/popup/common/report-total.jsp">
+		<put name="id" value="REPORTTOTAL"></put>
+	</definition>
+	
+	<!-- Popup report detail -->
+		<definition name="REPORTQUYDINHSSCD" path="/WEB-INF/pages/popup/report/report-hang-hoa-quy-dinh-sscd.jsp">
+		<put name="id" value="REPORTQUYDINHSSCD"></put>
+	</definition>
+		<definition name="REPORTPHANTICHTONKHO" path="/WEB-INF/pages/popup/report/report-phan-tich-ton-kho.jsp">
+		<put name="id" value="REPORTPHANTICHTONKHO"></put>
+	</definition>
+		<definition name="REPORTSOPHANHO" path="/WEB-INF/pages/popup/report/report-so-phan-ho.jsp">
+		<put name="id" value="REPORTSOPHANHO"></put>
+	</definition>
+		<definition name="REPORTTIEPNHANCAPPHATHH" path="/WEB-INF/pages/popup/report/report-tiep-nha-cap-phat-hang-hoa.jsp">
+		<put name="id" value="REPORTTIEPNHANCAPPHATHH"></put>
+	</definition>
+		<definition name="REPORTXUATNHAPTONDTQG" path="/WEB-INF/pages/popup/report/report-xuat-nhap-ton-dtqg.jsp">
+		<put name="id" value="REPORTXUATNHAPTONDTQG"></put>
+	</definition>
+			<definition name="REPORTXUATTHANHLY" path="/WEB-INF/pages/popup/report/report-xuat-thanh-ly.jsp">
+		<put name="id" value="REPORTXUATTHANHLY"></put>
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,96 @@
+
+<!-- CSS Bootstrap & Custom -->
+
+<!-- Bootstrap -->
+<link href="./css/vendors/bootstrap/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Font Awesome -->
+<link href="./css/vendors/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- iCheck -->
+<link href="./css/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+<!-- bootstrap-progressbar -->
+<link
+	href="./css/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css"
+	rel="stylesheet">
+<!-- jVectorMap -->
+<link href="./css/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
+
+<!-- Custom Theme Style -->
+<link href="./css/custom.css" rel="stylesheet">
+<link href="./css/vendors/bootstrap-daterangepicker/daterangepicker.css"
+	rel="stylesheet">
+<style type="text/css">
+.tree,.tree ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+
+.tree ul {
+	margin-left: 1em;
+	position: relative
+}
+
+.tree ul ul {
+	margin-left: .5em
+}
+
+.tree ul:before {
+	content: &amp; amp; amp; amp; quot; & amp; amp; amp; amp; quot;;
+	display: block;
+	width: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-left: 1px solid
+}
+
+.tree li {
+	margin: 0;
+	padding: 0 1em;
+	line-height: 2em;
+	color: #369;
+	font-weight: 700;
+	position: relative
+}
+
+.tree ul li:before {
+	content: &amp; amp; amp; amp; quot; & amp; amp; amp; amp; quot;;
+	display: block;
+	width: 10px;
+	height: 0;
+	border-top: 1px solid;
+	margin-top: -1px;
+	position: absolute;
+	top: 1em;
+	left: 0
+}
+
+.tree ul li:last-child:before {
+	background: #fff;
+	height: auto;
+	top: 1em;
+	bottom: 0
+}
+
+.indicator {
+	margin-right: 5px;
+}
+
+.tree li a {
+	text-decoration: none;
+	color: #369;
+}
+
+.tree li button,.tree li button:active,.tree li button:focus {
+	text-decoration: none;
+	color: #369;
+	border: none;
+	background: transparent;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	outline: 0;
+}
+</style>

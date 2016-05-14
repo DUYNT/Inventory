@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="BaseForm" type="com.tecapro.inventory.common.form.BaseForm" />
+    </form-beans>
+
+    <global-forwards>
+        <forward name="systemError" path="/WEB-INF/pages/common/system-error.jsp" />
+        <forward name="login" path="/Login_init.do" />
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/Tiles_init" name="BaseForm" scope="request" validate="false" parameter="no_session" />
+    </action-mappings>
+
+    <controller processorClass="com.tecapro.inventory.common.action.DelegatingRequestProcessor" maxFileSize="256M" bufferSize="4096" />
+
+    <message-resources parameter="appliaction-resources" key="inventory" />
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    	<!-- Can include multiple tiles-defs.xml, separate by comma -->
+        <set-property property="definitions-config"
+            value="
+		  /WEB-INF/tiles/common_tiles_defs.xml
+        , /WEB-INF/tiles/login/login_tiles_defs.xml
+		, /WEB-INF/tiles/home/home_tiles_defs.xml
+		, /WEB-INF/tiles/total/total_tiles_defs.xml
+		, /WEB-INF/tiles/store/store_tiles_defs.xml
+		, /WEB-INF/tiles/category/category_tiles_defs.xml
+		, /WEB-INF/tiles/report/report_tiles_defs.xml
+		, /WEB-INF/tiles/inventory/inventory_tiles_defs.xml
+		, /WEB-INF/tiles/station/station_tiles_defs.xml
+		, /WEB-INF/tiles/user/user_tiles_defs.xml
+		, /WEB-INF/tiles/authorities/authorities_tiles_defs.xml
+		, /WEB-INF/tiles/popup/popup_tiles_defs.xml
+		" />
+        <set-property property="moduleAware" value="true" />
+        <set-property property="definitions-parser-validate" value="true" />
+    </plug-in>
+
+</struts-config>

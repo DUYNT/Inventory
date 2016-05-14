@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+ 
+<struts-config>
+	<action-mappings>
+        <action path="/Inventory_init" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="INVENTORY" />
+            <forward name="failure" path="INVENTORY" />
+        </action>
+        <action path="/Inventory_recordTruth" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="INVENTORY" />
+            <forward name="failure" path="INVENTORY" />
+        </action>
+        <action path="/Inventory_report" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="INVENTORY" />
+            <forward name="failure" path="INVENTORY" />
+        </action>
+        
+	</action-mappings>
+</struts-config>

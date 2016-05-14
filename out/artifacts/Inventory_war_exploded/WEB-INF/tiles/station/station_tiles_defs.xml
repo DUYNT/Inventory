@@ -1,0 +1,22 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="STATION" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="STATION" />
+        <put name="title" value="Quản lý các đơn vị làm việc" />
+        <put name="body" value="/WEB-INF/pages/station/station.jsp" />
+    </definition>
+    
+   	<definition name="STATION1" path="/WEB-INF/pages/station/scr/scrstation1.jsp">
+    	<put name="id" value="STATION1"></put>
+    </definition>
+    
+    <definition name="STATION2" path="/WEB-INF/pages/station/scr/scrstation2.jsp">
+    	<put name="id" value="STATION2"></put>
+    </definition>
+    
+    <definition name="STATION3" path="/WEB-INF/pages/station/scr/scrstation3.jsp">
+    	<put name="id" value="STATION3"></put>
+    </definition>
+</tiles-definitions>

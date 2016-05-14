@@ -1,0 +1,31 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="CATEGORY" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="CATEGORY" />
+        <put name="body" value="/WEB-INF/pages/category/category.jsp" />
+    </definition>
+    
+    <definition name="CATEGORY1" path="/WEB-INF/pages/category/sub/scrcategory1.jsp">
+    	<put name="id" value="CATEGORY1"></put>
+    </definition>
+     <definition name="CATEGORY2" path="/WEB-INF/pages/category/sub/scrcategory2.jsp">
+    	<put name="id" value="CATEGORY2"></put>
+    </definition>
+     <definition name="CATEGORY3" path="/WEB-INF/pages/category/sub/scrcategory3.jsp">
+    	<put name="id" value="CATEGORY3"></put>
+    </definition>
+     <definition name="CATEGORY4" path="/WEB-INF/pages/category/sub/scrcategory4.jsp">
+    	<put name="id" value="CATEGORY4"></put>
+    </definition>
+     <definition name="CATEGORY5" path="/WEB-INF/pages/category/sub/scrcategory5.jsp">
+    	<put name="id" value="CATEGORY5"></put>
+    </definition>
+     <definition name="CATEGORY6" path="/WEB-INF/pages/category/sub/scrcategory6.jsp">
+    	<put name="id" value="CATEGORY6"></put>
+    </definition>
+     <definition name="CATEGORY7" path="/WEB-INF/pages/category/sub/scrcategory7.jsp">
+    	<put name="id" value="CATEGORY7"></put>
+    </definition>
+</tiles-definitions>

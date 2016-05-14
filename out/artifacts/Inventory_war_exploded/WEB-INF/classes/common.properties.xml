@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <!-- List record on page  -->
+    <entry key="LIST_RECORD_ON_PAGE">5,10,20,30,40,50</entry>
+        
+    <!-- Default number record on page -->
+    <entry key="DEFAULT_RECORD_ON_PAGE">30</entry>
+        
+    <!-- Max record allow export CSV -->
+    <entry key="MAX_CSV_COUNT">60000</entry>
+    
+    <!-- CSV encoding  -->
+    <entry key="CSV_ENCODE">UTF-8</entry>
+    
+    <!-- config item input UPPER case  -->
+    <entry key="UPPER_PROPERTIES"></entry>
+    
+    <!-- config item accept date validate 0000/00/00 -->
+    <entry key="MINDATEINPUT_PROPERTIES"></entry>
+    
+    <!-- config item accept date validate 9999/99/99 -->
+    <entry key="MAXDATEINPUT_PROPERTIES"></entry>
+    
+</properties>

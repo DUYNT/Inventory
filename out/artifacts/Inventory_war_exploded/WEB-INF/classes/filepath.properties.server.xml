@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+        <entry key="filepath.temp">C:/tmp/temp</entry>
+        <entry key="filepath.upload">C:/tmp/upload</entry>
+        <entry key="filepath.actionLog">c:/tmp/logs</entry>
+</properties>

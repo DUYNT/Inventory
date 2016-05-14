@@ -1,0 +1,98 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="REPORT" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="REPORT" />
+        <put name="body" value="/WEB-INF/pages/report/report.jsp" />
+    </definition>
+    
+    <definition name="REPORT1" path="/WEB-INF/pages/report/scr/scrreport1.jsp">
+    	<put name="id" value="REPORT1"></put>
+    </definition>
+     
+     <definition name="REPORT2" path="/WEB-INF/pages/report/scr/scrreport2.jsp">
+    	<put name="id" value="REPORT2"></put>
+    </definition>
+    
+    <definition name="REPORT3" path="/WEB-INF/pages/report/scr/scrreport3.jsp">
+    	<put name="id" value="REPORT3"></put>
+    </definition>
+    
+    <definition name="REPORT4" path="/WEB-INF/pages/report/scr/scrreport4.jsp">
+    	<put name="id" value="REPORT4"></put>
+    </definition>
+    
+    <definition name="REPORT5" path="/WEB-INF/pages/report/scr/scrreport5.jsp">
+    	<put name="id" value="REPORT5"></put>
+    </definition>
+    
+    <definition name="REPORT6" path="/WEB-INF/pages/report/scr/scrreport6.jsp">
+    	<put name="id" value="REPORT6"></put>
+    </definition>
+    
+    <definition name="REPORT7" path="/WEB-INF/pages/report/scr/scrreport7.jsp">
+    	<put name="id" value="REPORT7"></put>
+    </definition>
+    
+    <definition name="REPORT8" path="/WEB-INF/pages/report/scr/scrreport8.jsp">
+    	<put name="id" value="REPORT8"></put>
+    </definition>
+    
+    <definition name="REPORT9" path="/WEB-INF/pages/report/scr/scrreport9.jsp">
+    	<put name="id" value="REPORT9"></put>
+    </definition>
+    
+    <definition name="REPORT10" path="/WEB-INF/pages/report/scr/scrreport10.jsp">
+    	<put name="id" value="REPORT10"></put>
+    </definition>
+    
+    <definition name="REPORT11" path="/WEB-INF/pages/report/scr/scrreport11.jsp">
+    	<put name="id" value="REPORT11"></put>
+    </definition>
+    
+    <definition name="REPORT12" path="/WEB-INF/pages/report/scr/scrreport12.jsp">
+    	<put name="id" value="REPORT12"></put>
+    </definition>
+    
+    <definition name="REPORT13" path="/WEB-INF/pages/report/scr/scrreport13.jsp">
+    	<put name="id" value="REPORT13"></put>
+    </definition>
+    
+    <definition name="REPORT14" path="/WEB-INF/pages/report/scr/scrreport14.jsp">
+    	<put name="id" value="REPORT14"></put>
+    </definition>
+    
+    <definition name="REPORT15" path="/WEB-INF/pages/report/scr/scrreport15.jsp">
+    	<put name="id" value="REPORT15"></put>
+    </definition>
+    
+    <definition name="REPORT16" path="/WEB-INF/pages/report/scr/scrreport16.jsp">
+    	<put name="id" value="REPORT16"></put>
+    </definition>
+    
+    <definition name="REPORT17" path="/WEB-INF/pages/report/scr/scrreport17.jsp">
+    	<put name="id" value="REPORT17"></put>
+    </definition>
+    
+    <definition name="REPORT18" path="/WEB-INF/pages/report/scr/scrreport18.jsp">
+    	<put name="id" value="REPORT18"></put>
+    </definition>
+    
+    <definition name="REPORT19" path="/WEB-INF/pages/report/scr/scrreport19.jsp">
+    	<put name="id" value="REPORT19"></put>
+    </definition>
+    
+    <definition name="REPORT20" path="/WEB-INF/pages/report/scr/scrreport20.jsp">
+    	<put name="id" value="REPORT20"></put>
+    </definition>
+    
+    <definition name="REPORT21" path="/WEB-INF/pages/report/scr/scrreport21.jsp">
+    	<put name="id" value="REPORT21"></put>
+    </definition>
+    
+    <definition name="REPORT22" path="/WEB-INF/pages/report/scr/scrreport22.jsp">
+    	<put name="id" value="REPORT22"></put>
+    </definition>
+    
+</tiles-definitions>

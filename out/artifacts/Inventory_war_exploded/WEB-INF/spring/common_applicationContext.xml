@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        ">
+    <!--** DAO package: scan for mappers and let them be auto wired  **-->
+    <context:component-scan base-package="com.tecapro.inventory.common.action">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+    <context:component-scan base-package="com.tecapro.inventory.common.dao.impl">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+    </context:component-scan>
+    <context:component-scan base-package="com.tecapro.inventory.common.logic.impl">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+    </context:component-scan>
+    <context:component-scan base-package="com.tecapro.inventory.common.bean">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
+    </context:component-scan>
+    <context:component-scan base-package="com.tecapro.inventory.common.util">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
+    </context:component-scan>
+
+    <bean id="BaseAction" class="com.tecapro.inventory.common.action.BaseAction" scope="prototype" />
+    <bean id="BaseTilesAction" class="com.tecapro.inventory.common.action.BaseTilesAction" scope="prototype" />
+    <bean id="TilesLayoutAction" class="com.tecapro.inventory.common.action.TilesLayoutAction" scope="request" />
+    <bean id="BaseForm" class="com.tecapro.inventory.common.form.BaseForm" scope="request" />
+    
+    <!-- ファイルインターフェース -->
+    <!--  ダウンロードファイル書出用インタフェース -->
+    <bean id="readDownload" class="com.tecapro.inventory.common.util.FileDownloadUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.temp}" />
+    </bean>
+    <bean id="writeDownload" class="com.tecapro.inventory.common.util.FileDownloadUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.temp}" />
+        <property name="uploadDir" value="${filepath.upload}" />
+    </bean>
+    <bean id="deleteDownload" class="com.tecapro.inventory.common.util.FileDownloadUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.temp}" />
+    </bean>
+	<!--  共通Action、Bizロジックファイル受け渡し用インタフェース -->
+    <bean id="readTemp" class="com.tecapro.inventory.common.util.FileTempUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.temp}" />
+    </bean>
+    <bean id="writeTemp" class="com.tecapro.inventory.common.util.FileTempUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.temp}" />
+    </bean>
+    <bean id="deleteTemp" class="com.tecapro.inventory.common.util.FileTempUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.temp}" />
+    </bean>
+    <!--  ファイルアップロード -->
+    <bean id="readUpload" class="com.tecapro.inventory.common.util.FileLocalUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.upload}" />
+    </bean>
+    <bean id="writeUpload" class="com.tecapro.inventory.common.util.FileLocalUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.upload}" />
+        <property name="tempDir" value="${filepath.temp}" />
+    </bean>
+    <bean id="deleteUpload" class="com.tecapro.inventory.common.util.FileLocalUtil" scope="prototype">
+        <property name="baseDir" value="${filepath.upload}" />
+    </bean>
+
+    <bean id="InfoValue" class="com.tecapro.inventory.common.bean.InfoValue" scope="request" />
+    <bean id="TilesValue" class="com.tecapro.inventory.common.bean.TilesInfoValue" scope="request" />
+    
+    <!-- session scope -->
+    <bean id="UserInfo" class="com.tecapro.inventory.common.bean.UserInfoValue" scope="session" />
+    
+	<!-- SET default mail properties -->
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl" scope="prototype">
+        <property name="host" value="${mail.host}" />
+        <property name="port" value="${mail.port}" />
+        <property name="protocol" value="${mail.protocol}" />
+        <property name="defaultEncoding" value="${mail.defaultEncoding}" />
+        <property name="username" value="${mail.username}" />
+        <property name="password" value="${mail.password}" />
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.ssl.enable">${mail.smtp.ssl.enable}</prop>
+                <prop key="mail.smtp.starttls.enable">${mail.smtp.starttls.enable}</prop>
+                <prop key="mail.transport.protocol">${mail.protocol}</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

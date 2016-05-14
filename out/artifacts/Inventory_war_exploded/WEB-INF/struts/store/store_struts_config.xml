@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+ 
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+ 
+<struts-config>
+	<action-mappings>
+        <action path="/Store_init" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="STORE"/>
+            <forward name="failure" path="STORE"/>
+        </action>
+        <action path="/Store_output" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="STORE"/>
+            <forward name="failure" path="STORE"/>
+        </action>
+        <action path="/Store_outputLimitUnit" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="STORE"/>
+            <forward name="failure" path="STORE"/>
+        </action>
+        <action path="/Store_advanceOLimitUnit" name="BaseForm" scope="request" validate="false">
+            <forward name="success" path="STORE"/>
+            <forward name="failure" path="STORE"/>
+        </action>
+	</action-mappings>
+</struts-config>

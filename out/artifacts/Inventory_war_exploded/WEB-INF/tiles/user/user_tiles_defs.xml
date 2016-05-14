@@ -1,0 +1,25 @@
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+    <definition name="USER" extends="BASE" controllerUrl="/Tiles_init.do">
+        <put name="id" value="USER" />
+        <put name="title" value="Quản lý người dùng" />
+        <put name="body" value="/WEB-INF/pages/user/user.jsp" />
+    </definition>
+    
+   	<definition name="USER1" path="/WEB-INF/pages/user/scr/scruse1.jsp">
+    	<put name="id" value="USER1"></put>
+    </definition>
+    
+    <definition name="USER2" path="/WEB-INF/pages/user/scr/scruse2.jsp">
+    	<put name="id" value="USER2"></put>
+    </definition>
+    
+    <definition name="USER3" path="/WEB-INF/pages/user/scr/scruse3.jsp">
+    	<put name="id" value="USER3"></put>
+    </definition>
+    <definition name="USERCONTROL" path="/WEB-INF/pages/user/scr/scruse4.jsp">
+    	<put name="id" value="USERCONTROL"></put>
+    </definition>
+</tiles-definitions>
